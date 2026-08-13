@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Le Débiaiseur — générateur de sondages fictifs.">
+  <title>Le Débiaiseur — Sondages fictifs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">le<span>debiaiseur</span></div>
+    <div class="badge">SONDAGE FICTIF</div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">CONTRE LE BRUIT MÉDIATIQUE</p>
+      <h1>Et si on regardait<br><em>autre chose ?</em></h1>
+      <p class="intro">Générez un sondage fictif en quelques secondes. Les résultats sont aléatoires et ne constituent en aucun cas une mesure de l'opinion publique.</p>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">GÉNÉRATEUR</p>
+          <h2>Créer un sondage</h2>
+        </div>
+        <span id="seedLabel">Scénario aléatoire</span>
+      </div>
+
+      <div class="form-grid">
+        <label>
+          <span>Élection</span>
+          <select id="election">
+            <option value="Présidentielle française">Présidentielle française</option>
+            <option value="Élection fictive">Élection fictive</option>
+            <option value="Élection européenne">Élection européenne</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Nombre de candidats</span>
+          <select id="candidateCount">
+            <option value="4">4 candidats</option>
+            <option value="5">5 candidats</option>
+            <option value="6">6 candidats</option>
+            <option value="7">7 candidats</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="candidates">
+        <div class="section-label">Candidats</div>
+        <div id="candidateInputs"></div>
+      </div>
+
+      <div class="actions">
+        <button id="generate" class="primary">Générer le sondage <span>→</span></button>
+        <button id="randomize" class="secondary">Nouveau scénario</button>
+      </div>
+    </section>
+
+    <section id="result" class="result hidden" aria-live="polite">
+      <div class="result-top">
+        <div>
+          <p class="eyebrow">SONDAGE FICTIF</p>
+          <h2 id="resultTitle"></h2>
+          <p id="resultQuestion" class="question"></p>
+        </div>
+        <button id="copy" class="copy">Copier</button>
+      </div>
+
+      <div id="bars" class="bars"></div>
+
+      <div class="result-meta">
+        <span id="sample"></span>
+        <span id="margin"></span>
+      </div>
+
+      <div class="warning">
+        <strong>⚠ Résultats fictifs</strong>
+        <p>Ce sondage a été généré aléatoirement par Le Débiaiseur. Il ne repose sur aucun échantillon réel et ne constitue aucune estimation de l'opinion publique.</p>
+      </div>
+    </section>
+
+    <footer>
+      <p><strong>ledebiaiseur</strong> — Générateur de sondages fictifs.</p>
+      <p>Projet indépendant. Les données affichées sont générées automatiquement.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
